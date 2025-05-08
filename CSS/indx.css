@@ -1,0 +1,156 @@
+/* Basic styling for the body */
+body {
+    background-color: rgb(178, 196, 201);
+}
+
+.center-heading {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 100px; /* adjust as needed */
+}
+
+
+/* Gallery styling */
+.image-container {
+    display: flex; /* Flexbox to center content */
+    justify-content: center; /* Horizontal center */
+    align-items: center; /* Vertical center */
+    margin-top: 20px; /* Move the container closer to the top */
+    padding: 20px; /* Optional padding around the image container */
+}
+
+/* Basic styling for the navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Burger icon styling */
+.burger-icon {
+    display: none; /* Hide the burger icon by default */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+.top-right-links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.top-right-links a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-left: 5px;
+}
+
+.top-right-links a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile view: When the screen size is small, hide the menu and show the burger icon */
+@media screen and (max-width: 768px) {
+
+    
+
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack the menu items vertically */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .burger-icon {
+        display: block; /* Show the burger icon on smaller screens */
+    }
+
+    .menu.active {
+        display: flex; /* Show the menu when it's active */
+    }
+
+    /* Adjust the image container to be closer to the top */
+    .image-container {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Adjust height to fit content */
+        padding-top: 20px; /* Move the image container closer to the top on mobile */
+    }
+
+    .top-right-links {
+        top: 30px; /* Increase top spacing for mobile */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack the menu items vertically */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .burger-icon {
+        display: block; /* Show the burger icon on smaller screens */
+    }
+
+    .menu.active {
+        display: flex; /* Show the menu when it's active */
+    }
+
+    /* Adjust the image container to be closer to the top */
+    .image-container {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto; /* Adjust height to fit content */
+        padding-top: 20px; /* Add some padding to push it down a bit from the top */
+    }
+}

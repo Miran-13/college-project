@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/indx.css">
+    <title>Home - My Personal Page</title>
+</head>
+<body>
+
+    <div id="nav-container"></div>
+
+    <div class="center-heading">
+        <h1>Welcome to London College</h1>
+    </div>
+
+    
+    <div class="top-right-links">
+        <!-- Links for student sign-in and registration -->
+        <a href="login.html">Sign In</a> | 
+        <a href="register.html">Register</a>
+    </div>
+
+    <div class="image-container">
+        <img src="images/html_image.jfif" alt="HTML Image" class="slide-image" id="image-1">
+        <img src="images/python.jfif" alt="Python Image" class="slide-image" id="image-2">
+        <img src="images/java.jfif" alt="Java Image" class="slide-image" id="image-3">
+        <img src="images/css.jfif" alt="CSS Image" class="slide-image" id="image-4">
+    </div>
+
+    <script src="JS/load-nav.js"></script>
+    <script src="JS/nav-func.js"></script>
+
+    <script>
+        const imageIds = ['image-1', 'image-2', 'image-3', 'image-4'];
+        
+        let currentIndex = 0;
+
+        function changeImage() {
+            imageIds.forEach((id) => {
+                document.getElementById(id).style.display = 'none';
+            });
+
+            document.getElementById(imageIds[currentIndex]).style.display = 'block';
+            currentIndex = (currentIndex + 1) % imageIds.length;
+        }
+
+        changeImage();
+
+        setInterval(changeImage, 2000);
+    </script>
+
+</body>
+</html>

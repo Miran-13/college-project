@@ -1,0 +1,326 @@
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 0;
+    position: relative;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Burger Icon Styling */
+.burger-icon {
+    display: none; /* Hide the burger icon by default */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}
+
+/* Style for the container */
+#section2-content {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the links */
+#section2-content a {
+    display: block;  /* Make links block level for easier styling */
+    color: #007BFF;  /* Change link color to blue */
+    text-decoration: none;  /* Remove underline */
+    margin: 10px 0;  /* Add space between links */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;  /* Subtle background color for links */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+}
+
+/* Hover effect for links */
+#section2-content a:hover {
+    background-color: #007BFF;  /* Background color change on hover */
+    color: white;  /* Change text color to white on hover */
+    transform: scale(1.05);  /* Slight zoom effect */
+}
+
+
+/* Mobile View: Show the burger icon and hide the menu */
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none; /* Hide the menu by default */
+        flex-direction: column; /* Stack the menu items vertically */
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .burger-icon {
+        display: block; /* Show the burger icon on smaller screens */
+    }
+
+    .menu.active {
+        display: flex; /* Show the menu when it's active */
+    }
+
+    /* Adjust container padding for smaller screens */
+    #section2-content {
+        padding: 15px;
+    }
+
+    /* Adjust the links to have full width on small screens */
+    #section2-content a {
+        padding: 15px;
+        font-size: 16px;
+        width: 100%;  /* Make links take full width */
+        text-align: center;  /* Center text within links */
+    }
+
+    /* Optional: Adjust hover effects on mobile */
+    #section2-content a:hover {
+        transform: none;  /* Disable hover zoom on mobile */
+    }
+}
+
+/* Content Container Styles */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Space above the content */
+}
+
+/* Row Styles */
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Rectangle Section Styles (Clickable Items) */
+.rectangle {
+    width: 200px;
+    height: 120px;
+    background-color: #3498db; /* Blue color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    cursor: pointer; /* Indicate that the section is clickable */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for rectangles */
+.rectangle:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+/* Section Content Styling */
+.section-content {
+    display: none; /* Hide all sections initially */
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Content Visible When Active */
+.section-content.active {
+    display: block;
+}
+
+/* Paragraph Styling Inside Section Content */
+.section-content p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Strong element styling for emphasis inside paragraphs */
+.section-content p strong {
+    font-weight: bold;
+    color: #2980b9; /* Highlighted text color */
+}
+
+/* Link styling within paragraphs */
+.section-content p a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.section-content p a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Styling for Content (to make it more responsive) */
+@media screen and (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .rectangle {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .section-content {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Adjust text size for paragraphs on mobile */
+    .section-content p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Adjust heading size in section content on mobile */
+    .section-content h1 {
+        font-size: 1.6rem; /* Smaller heading for mobile */
+    }
+}
+
+/* Large screens (larger than 768px) */
+@media screen and (min-width: 769px) {
+    .section-content {
+        padding: 30px;
+    }
+
+    .section-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .section-content p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+}
+
+/* Small screens (mobile) */
+@media screen and (max-width: 480px) {
+    .section-content h1 {
+        font-size: 1.4rem; /* Smaller heading for very small screens */
+    }
+
+    .section-content p {
+        font-size: 0.85rem; /* Smaller text on very small screens */
+    }
+}
+
+/* Style for the container */
+#section1-content {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title style */
+#section1-content h2 {
+    margin-bottom: 20px;
+}
+
+/* Style for each centre block */
+.centre {
+    display: inline-block;
+    width: 200px;  /* Fixed size for square */
+    height: 200px;
+    margin: 10px;
+    background-color: #007BFF;  /* Blue background for the square */
+    color: white;
+    text-align: center;
+    line-height: 200px;  /* Center the text vertically */
+    border-radius: 10px;
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+    box-sizing: border-box;
+}
+
+.centre a {
+    display: block;  /* Make the <a> tag fill the whole div */
+    color: white;
+    text-decoration: none;
+    height: 100%;  /* Fill the entire square */
+    width: 100%;  /* Fill the entire square */
+    display: flex;
+    align-items: center;  /* Vertically center the text */
+    justify-content: center;  /* Horizontally center the text */
+}
+
+/* Hover effect for the centre blocks */
+.centre:hover {
+    background-color: #0056b3;  /* Darker blue when hovered */
+    transform: scale(1.05);  /* Slight zoom effect */
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 600px) {
+    #section1-content {
+        padding: 15px;
+    }
+    
+    .centre {
+        width: 150px;  /* Adjust size of square for smaller screens */
+        height: 150px;
+    }
+
+    /* Adjust text size for smaller screens */
+    .centre-name {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/about.css">
+    <title>About</title>
+</head>
+<body>
+
+    <!-- Navigation Container -->
+    <div id="nav-container"></div> <!-- Navigation will be injected here -->
+
+    <div class="content-container">
+        <div class="row">
+            <div class="rectangle" id="section1" onclick="handleClick('section1')">Our centres</div>
+            <div class="rectangle" id="section2" onclick="handleClick('section2')">Our courses</div>
+            <div class="rectangle" id="section3" onclick="handleClick('section3')">Our values</div>
+        </div>
+        <div class="row">
+            <div class="rectangle" id="section4" onclick="handleClick('section4')">History</div>
+            <div class="rectangle" id="section5" onclick="handleClick('section5')">Safeguarding</div>
+            <div class="rectangle" id="section6" onclick="handleClick('section6')">Governance</div>
+        </div>
+    
+        <div id="section1-content" class="section-content">
+            <h2>Click on a centre below to learn more:</h2>
+            
+            <div class="centre" id="centre1">
+                <a href="westminster.html">
+                    <span class="centre-name">Westminster</span>
+                </a>
+            </div>
+            
+            <div class="centre" id="centre2">
+                <a href="tottenham.html">
+                    <span class="centre-name">Tottenham</span>
+                </a>
+            </div>
+            
+            <div class="centre" id="centre3">
+                <a href="enfield.html">
+                    <span class="centre-name">Enfield</span>
+                </a>
+            </div>
+        </div>        
+        
+        <div id="section2-content" class="section-content">
+            <h2>Click the link below for the desired course:</h2>
+            <a href="web.html">Web Development</a>
+            <a href="python.html">Python Programming</a>
+            <a href="java.html">Java Programming</a>
+        </div>
+
+        <div id="section3-content" class="section-content">
+            <h1>Our values</h1>
+            <p>
+                Imagine turning your passion into a career—whether it’s creating new flavour combinations, designing groundbreaking technology, 
+                or driving change in your community. At Capital City College (CCC), we’re inspired by uncovering what the future holds for you – 
+                and we’ll help you grow your skills and self-belief to make it happen.
+            </p>
+            <p>
+                As the largest further and higher education college in London, we offer the quality you deserve; 
+                state of the art facilities and a wide range of courses as unique as your interests and aptitude. 
+                Through partnerships with industry and academia, we open doors to your real-world success.
+            </p>
+        </div>
+        <div id="section4-content" class="section-content">
+            <h1>History</h1>
+            <p>In 2024, the group announced a bold new brand identity that unites all our colleges under one logo. 
+                City and Islington College, The College of Haringey, Enfield and North East London, and Westminster Kingsway College, 
+                will operate under the shared identity of Capital City College. Capital City College Training will operate under a new brand identity of Apprenticeships+.
+            </p>
+            <p>The fresh new logos are a symbol of our shared mission, with the segments in the letter “C” representing both our diverse community and our different centres of excellence across London. 
+                This rebranding reflects our commitment to providing high-quality education and training across London while celebrating the strength of our unity and diversity.
+            </p>
+            <p>In addition to the new group logo, several of our centres will also be adopting new names to align more closely with their locations, ensuring a cohesive identity across the group. 
+                By using centre locations as the foundation for these names, we are creating a clearer and more unified brand presence while still honouring the distinctiveness of each site.
+            </p>
+        </div>
+        <div id="section5-content" class="section-content">
+            <h1>Safeguarding</h1>
+            <p>
+                Safeguarding is the term used when talking about protecting vulnerable adults and young people from abuse or neglect. 
+                Across all of our colleges, we are committed to ensuring that every member of staff is safeguarding-trained to help ensure 
+                our college is a safe place for your child to study.
+            </p>
+            <p>
+                We have a dedicated safeguarding team who leads all safeguarding matters at each college. 
+                Every member of staff in our group is trained and inducted in Safeguarding procedures. 
+                You can find details of our safeguarding teams by visiting each of our college websites.
+            </p>
+        </div>
+        <div id="section6-content" class="section-content">
+            <h1>Governance</h1>
+            <p>
+                Capital City College is the trading name of Capital City College Group, 
+                and is an independent corporation with exempt charity status formed under the Further and Higher Education Act 1992.
+            </p>
+            <p>
+                The Instrument and Articles of Government set down the powers, membership, roles and responsibilities of Corporations in Further Education colleges. 
+                The board is accountable for the use of public funds and has a duty of care for the assets of the colleges and the role of its members is similar to that of non-executive directors or trustees. 
+                This body is advised by a clerk who is employed directly by the corporation and has access to independent professional advice.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- External JS Files -->
+    <script src="JS/load-nav.js"></script> <!-- This loads the navigation dynamically -->
+    <script src="JS/nav-func.js"></script> <!-- JavaScript for nav functionality -->
+    <script src="JS/handle-click.js"></script> <!-- JS for handling click events on sections -->
+    <script src="JS/show-content.js"></script> <!-- External JS for toggling content visibility -->
+
+</body>
+</html>

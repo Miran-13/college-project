@@ -1,0 +1,95 @@
+/* Basic styling for the menu */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between; /* This will distribute space between items */
+    align-items: center; /* Align the items vertically in the center */
+   
+}
+
+/* Styling for links in the navigation */
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+/* By default, hide the menu on mobile screens */
+.menu {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Show the menu when 'active' class is added */
+.menu.active {
+    display: block;
+}
+
+/* Hamburger icon styling */
+.burger-icon {
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    display: block;
+    position: absolute;
+    right: 10px; /* Move the hamburger icon to the right */
+    top: 50%; /* Vertically center the hamburger icon */
+    transform: translateY(-50%); /* Fine-tune the vertical centering */
+}
+
+/* Dropdown menu styling */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+}
+
+/* When the 'show' class is added, the dropdown will be visible */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Media query for larger screens */
+@media screen and (min-width: 768px) {
+    .menu {
+        display: flex; /* Display the menu horizontally on larger screens */
+    }
+    .burger-icon {
+        display: none; /* Hide the hamburger icon on larger screens */
+    }
+    .dropdown {
+        position: relative;
+    }
+
+    /* Center the navigation, but without limiting its width */
+    nav {
+        justify-content: center; /* This centers the items horizontally within the nav */
+    }
+}
+
+/* Dropdown link styling */
+.dropdown-content li {
+    padding: 10px 20px;
+}
+
+.dropdown-content li a {
+    color: #333;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
